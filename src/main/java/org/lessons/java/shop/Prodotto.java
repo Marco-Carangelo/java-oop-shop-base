@@ -1,5 +1,7 @@
 package org.lessons.java.shop;
 
+import java.util.Random;
+
 public class Prodotto {
 	
 	//Dichiarazione degli attributi della classe
@@ -8,9 +10,24 @@ public class Prodotto {
 	String prodName;
 	String prodInfo;
 	float prodPrice;
-	float prodIva;
+	int prodIva;
 	
+	//Metodo costruttore della classe
 	
+		public Prodotto(String prodName,String prodInfo,float prodPrice,int prodIva) {
+			
+			//Dichiarazione di una variabile locale per contenere un'istanza di Random
+			Random r = new Random();
+			
+			//Assegnazione di un valore random compreso tra 0 e 999999 all'attributo prodCode relativo all'istanza che si sta creando
+			this.prodCode= r.nextInt(1000000);
+			
+			//Assegnazione degli altri attributi del metodo
+			this.prodName =prodName;
+			this.prodInfo=prodInfo;
+			this.prodPrice=prodPrice;
+			this.prodIva=prodIva;
+		}
 	
 	
 
