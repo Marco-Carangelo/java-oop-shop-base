@@ -35,6 +35,13 @@ public class Prodotto {
 			return prodPrice;
 		}
 		
+	//Metodo per avere il prezzo + IVA
+		
+		public float getTaxedPrice( ) {
+			
+			return prodPrice += prodPrice * (prodIva/100);
+		}
+		
 	
 	
 
