@@ -30,7 +30,8 @@ public class Main {
 		
 		Prodotto userProd = new Prodotto(userProdName,userProdInfo,userProdPrice,userProdIva);
 				
-		
+		//Richiamiamo il metodo per stampare il prezzo base del prodotto
+		System.out.printf("Il prezzo di base del prodotto è: /d",userProd.getBasePrice());
 				
 				
 		scanner.close();
