@@ -21,7 +21,7 @@ public class Prodotto {
 		Random r = new Random();
 			
 		//Assegnazione di un valore random compreso tra 0 e 999999 all'attributo prodCode relativo all'istanza che si sta creando
-		this.prodCode= r.nextInt(1000000);
+		this.prodCode= (int) (r.nextDouble() * (999999 - 100000 + 1) + 100000);
 			
 		//Assegnazione degli altri attributi del metodo
 		this.prodName =prodName;
@@ -53,7 +53,7 @@ public class Prodotto {
 	public String getFullProdName() {
 			
 		//Dichiariamo una variabile locale che conterrà il nome completo del prodotto
-		String fullName = String.format("%06d-%s",prodCode,prodName);
+		String fullName = String.format("%d-%s",prodCode,prodName);
 		
 		return fullName;
 	}
