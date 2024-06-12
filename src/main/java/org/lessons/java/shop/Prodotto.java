@@ -42,6 +42,15 @@ public class Prodotto {
 			return prodPrice += prodPrice * (prodIva/100);
 		}
 		
+	//Metodo per ottenere il nome esteso formato da "codicenumerico-nome"
+		
+		public String getFullProdName() {
+			
+			//Dichiariamo una variabile locale che conterrà il nome completo del prodotto
+			String fullName = String.format("%06d-%s",prodCode,prodName);
+		
+			return fullName;
+		}
 	
 	
 
