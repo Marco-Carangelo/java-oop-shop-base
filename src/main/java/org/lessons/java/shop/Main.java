@@ -26,7 +26,13 @@ public class Main {
 		System.out.println("Inserisci il valore dell'Iva da applicare sul prodotto: ");
 		userProdIva= scanner.nextInt();
 		
+		//Creiamo un'istanza della classe prodotto
 		
+		Prodotto userProd = new Prodotto(userProdName,userProdInfo,userProdPrice,userProdIva);
+				
+		
+				
+				
 		scanner.close();
 	}
 
