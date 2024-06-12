@@ -31,13 +31,13 @@ public class Main {
 		Prodotto userProd = new Prodotto(userProdName,userProdInfo,userProdPrice,userProdIva);
 				
 		//Richiamiamo il metodo per stampare il prezzo base del prodotto
-		System.out.println("Il prezzo di base del prodotto è: " + userProd.getBasePrice());
+		System.out.printf("Il prezzo di base del prodotto è: %.2f \n" , userProd.getBasePrice());
 		
 		//Richiamiamo il metodo per stampare il prezzo + IVA del prodotto
-		System.out.println("Il prezzo sommato all'IVA del prodotto è: "+ userProd.getTaxedPrice());
+		System.out.printf("Il prezzo sommato all'IVA del prodotto è: %.2f \n", userProd.getTaxedPrice());
 		
 		//Richiamiamo il metodo per stampare il nome completo del prodotto
-		System.out.println("L'identificativo completo del prodotto è: " +userProd.getFullProdName());
+		System.out.println("L'identificativo completo del prodotto è: " + userProd.getFullProdName());
 				
 		scanner.close();
 	}
