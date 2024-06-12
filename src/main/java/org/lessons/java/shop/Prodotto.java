@@ -28,6 +28,13 @@ public class Prodotto {
 			this.prodPrice=prodPrice;
 			this.prodIva=prodIva;
 		}
+		
+	//Metodo per avare il prezzo base
+		
+		public float getBasePrice() {
+			return prodPrice;
+		}
+		
 	
 	
 
