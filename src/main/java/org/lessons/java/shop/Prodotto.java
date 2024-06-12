@@ -12,45 +12,51 @@ public class Prodotto {
 	float prodPrice;
 	int prodIva;
 	
+	
 	//Metodo costruttore della classe
 	
-		public Prodotto(String prodName,String prodInfo,float prodPrice,int prodIva) {
+	public Prodotto(String prodName,String prodInfo,float prodPrice,int prodIva) {
 			
-			//Dichiarazione di una variabile locale per contenere un'istanza di Random
-			Random r = new Random();
+		//Dichiarazione di una variabile locale per contenere un'istanza di Random
+		Random r = new Random();
 			
-			//Assegnazione di un valore random compreso tra 0 e 999999 all'attributo prodCode relativo all'istanza che si sta creando
-			this.prodCode= r.nextInt(1000000);
+		//Assegnazione di un valore random compreso tra 0 e 999999 all'attributo prodCode relativo all'istanza che si sta creando
+		this.prodCode= r.nextInt(1000000);
 			
-			//Assegnazione degli altri attributi del metodo
-			this.prodName =prodName;
-			this.prodInfo=prodInfo;
-			this.prodPrice=prodPrice;
-			this.prodIva=prodIva;
-		}
+		//Assegnazione degli altri attributi del metodo
+		this.prodName =prodName;
+		this.prodInfo=prodInfo;
+		this.prodPrice=prodPrice;
+		this.prodIva=prodIva;
+	}
+	
 		
 	//Metodo per avare il prezzo base
 		
-		public float getBasePrice() {
-			return prodPrice;
-		}
+	public float getBasePrice() {
+		return prodPrice;
+	}
+	
 		
 	//Metodo per avere il prezzo + IVA
 		
-		public float getTaxedPrice( ) {
-			
-			return prodPrice += prodPrice * (prodIva/100);
-		}
+	public float getTaxedPrice( ) {
+		
+		//Restituiamo il risultato della somma tra il prezzo del prodotto e la percentuale d'IVA
+		
+		return prodPrice + (prodPrice*((float)prodIva/100));
+	}
+	
 		
 	//Metodo per ottenere il nome esteso formato da "codicenumerico-nome"
 		
-		public String getFullProdName() {
+	public String getFullProdName() {
 			
-			//Dichiariamo una variabile locale che conterrà il nome completo del prodotto
-			String fullName = String.format("%06d-%s",prodCode,prodName);
+		//Dichiariamo una variabile locale che conterrà il nome completo del prodotto
+		String fullName = String.format("%06d-%s",prodCode,prodName);
 		
-			return fullName;
-		}
+		return fullName;
+	}
 	
 	
 
